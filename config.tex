@@ -38,7 +38,18 @@
 \renewcommand*{\familydefault}{\rmdefault}
 \addtokomafont{disposition}{\rmfamily}
 
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
 
+\usepackage[a4paper, margin=1in]{geometry}
+\pgfplotsset{width=14cm,height=10cm,compat=1.9}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
 %		BIBLIOGRAPHY SETTINGS
 %
 
