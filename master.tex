@@ -1,13 +1,5 @@
 \documentclass[fontsize=12pt,BCOR=5mm,DIV=12,parskip=half,listof=totoc,
            paper=a4,toc=bibliography=totoc,pointlessnumbers,plainfootsepline]{scrreprt}
-
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\usepackage{setspace}
-\doublespacing % Enable double spacing
-
-\usepackage[english]{babel}
-\usepackage{csquotes}
 %%%%%%%%%%%%%
 %% ZITIERSTIL
 %%%%%%%%%%%%%
@@ -15,70 +7,29 @@
 % @stud: Zitierstil in package biblatex unten wählen
 %
 % NUMERIC Style - e. g. [12]
-% style=numeric 
+% style=numeric
 %
-% IEEE Style - numeric kind of style 
-% style=ieee 
+% IEEE Style - numeric kind of style
+% style=ieee
 %
 % ALPHABETIC Style - e. g. [AB12]
-% style=alphabetic 
+% style=alphabetic
 %
-% HARVARD Style 
-% style=apa 
+% HARVARD Style
+% style=apa
 %
-% CHICAGO Style 
+% CHICAGO Style
 % style=authoryear
 %
 % Position des Zitats:
 %
-% autocite=inline 
+% autocite=inline
 %
 % (!!) FOOTNOTE POSITION NOT RECOMMENDED IN MINT DOMAIN:
 % autocite=footnote
 %
 %
-\usepackage[backend=biber, autocite=footnote, style=authoryear, dashed=false]{biblatex} 
-\usepackage{makeidx}                  % allows index generation
-\usepackage{listings}	                %Format Listings properly
-\usepackage{lipsum}                   % Blindtext
-\usepackage{graphicx}                 % use various graphics formats
-%\usepackage[german]{varioref}         % nicer references \vref
-\usepackage{caption}	                % better Captions
-\usepackage{booktabs}                 % nicer Tabs
-\usepackage[hidelinks=true]{hyperref} % keine roten Markierungen bei Links
-\usepackage{fnpct}                    % Correct superscripts 
-\usepackage{calc}                     % Used for extra space below footsepline, in particular
-\usepackage{array}
-\usepackage{acronym}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{setspace}
-\usepackage{tocloft}
-%\usepackage[T1]{fontenc}
-
-% Definitionen und Commands
-\newcommand{\indextype}{numeric}
-\newcommand{\abs}{\par\vskip 0.2cm\goodbreak\noindent}
-\newcommand{\nl}{\par\noindent}
-\newcommand{\mcl}[1]{\mathcal{#1}}
-\newcommand{\nowrite}[1]{}
-\newcommand{\NN}{{\mathbb N}}
-\newcommand{\imagedir}{img}
-\newcommand{\TitelDerArbeit}[1]{\def\DerTitelDerArbeit{#1}\hypersetup{pdftitle={#1}}}
-\newcommand{\AutorDerArbeit}[1]{\def\DerAutorDerArbeit{#1}\hypersetup{pdfauthor={#1}}}
-\newcommand{\Vorlesung}[1]{\def\DieVorlesung{#1}}
-\newcommand{\Firma}[1]{\def\DerNameDerFirma{#1}}
-\newcommand{\Kurs}[1]{\def\DieKursbezeichnung{#1}}
-\newcommand{\Abteilung}[1]{\def\DerNameDerAbteilung{#1}}
-\newcommand{\Studiengangsleiter}[1]{\def\DerStudiengangsleiter{#1}}
-\newcommand{\WissBetreuer}[1]{\def\DerWissBetreuer{#1}}
-\newcommand{\FirmenBetreuer}[1]{\def\DerFirmenBetreuer{#1}}
-\newcommand{\Bearbeitungszeitraum}[1]{\def\DerBearbeitungszeitraum{#1}}
-\newcommand{\Abgabedatum}[1]{\def\DasAbgabedatum{#1}}
-\newcommand{\Matrikelnummer}[1]{\def\DieMatrikelnummer{#1}}
-\newcommand{\Studienrichtung}[1]{\def\DieStudienrichtung{#1}}
-\newcommand{\ArtDerArbeit}[1]{\def\DieArtDerArbeit{#1}}
-\newcommand{\Literaturverzeichnis}{Literaturverzeichnis}
+\input{config}
 
 % Page Layout
 \oddsidemargin=0mm
@@ -91,22 +42,7 @@
 
 \makeindex
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LITERATURVERZEICHNIS
-% @stud: Literaturverzeichnis in Datei bibliography.bib anpassen. 
-%
-% [Alternative zu Verwendung von \initializeBibliography: Citavi ... (dazu eigenes LaTex Coding verwenden)]
-%
-\addbibresource{bibliography.bib}
-%\DefineBibliographyStrings{ngerman}{andothers = {{et\,al\adddot}},}
 
-% Elementare Konfigurationen und Definitionen werden geladen 
-% @stud: gegebenenfalls anpassen
-%
-\input{config}
-
-% @stud
-%
 % PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG EINGEBEN zwischen den Klammern: {...})
 %
 \TitelDerArbeit{The practical implementation of the EU taxonomy at SAP}
@@ -125,8 +61,8 @@
 %
 % @stud: ewerkl.tex bearbeiten
 %
-\input{ewerkl} 
-\cleardoublepage  
+\input{ewerkl}
+\cleardoublepage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,7 +70,7 @@
 %
 % @stud: nondisclosurenotice.tex bearbeiten
 %
-%\input{nondisclosurenotice} 
+%\input{nondisclosurenotice}
 %\cleardoublepage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -144,7 +80,7 @@
 % @stud: acknowledge.tex bearbeiten
 %
 %\input{acknowledge}
-%\cleardoublepage 
+%\cleardoublepage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,14 +113,14 @@
 
 % Abkürzungsverzeichnis
 % @stud: acronyms.tex bearbeiten
-\input{acronyms} 
+\input{acronyms}
 \cleardoublepage
 
 \onehalfspacing
 
 %	Kurzfassung / Abstract
 % @stud: abstract.tex bearbeiten
-%\input{abstract} 
+%\input{abstract}
 \cleardoublepage
 
 \initializeText
@@ -203,19 +139,19 @@
 % @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
 %
 % Einleitung
-\input{Sustainbility C&A Evaluation/LaTeX/chapters/1-introduction}
+\input{chapters/1-introduction}
 
 % mehrere Grundlagen- und Forschungs-Kapitel
-\input{Sustainbility C&A Evaluation/LaTeX/chapters/chapter1}
-\input{Sustainbility C&A Evaluation/LaTeX/chapters/chapter2}
+\input{chapters/chapter1}
+\input{chapters/chapter2}
 % Fazit und Ausblick
-%\input{Sustainbility C&A Evaluation/LaTeX/chapters/conclusion}
+%\input{chapters/conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ANHÄNGE
 %
-% @stud: einzelne Anhänge bearbeiten und eigene Anhänge hier einfügen 
+% @stud: einzelne Anhänge bearbeiten und eigene Anhänge hier einfügen
 %        die nachfolgenden Zeilen deaktivieren, wenn keine Anhänge verwendet werden
 %
 %\initializeAppendix
@@ -226,8 +162,8 @@
 \singlespacing
 
 %\ihead{}
-%\printbibliography[title=\Literaturverzeichnis] 
-\printbibliography 
+%\printbibliography[title=\Literaturverzeichnis]
+\printbibliography
 \cleardoublepage
 
 %\initializeBibliography

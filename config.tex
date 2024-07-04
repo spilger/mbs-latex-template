@@ -2,8 +2,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ANLEITUNG:
-% Passen Sie gegebenenfalls alle Stellen im Dokument an, die mit 
-% @stud 
+% Passen Sie gegebenenfalls alle Stellen im Dokument an, die mit
+% @stud
 % markiert sind.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,7 +20,7 @@
 \usepackage{caption}                  % better Captions
 \usepackage{booktabs}                 % nicer Tabs
 \usepackage[hidelinks=true]{hyperref} % no red markings on links
-\usepackage{fnpct}                    % Correct superscripts 
+\usepackage{fnpct}                    % Correct superscripts
 \usepackage{calc}                     % Used for extra space below footsepline, in particular
 \usepackage{array}
 \usepackage{acronym}
@@ -28,6 +28,8 @@
 \usepackage{algpseudocode}
 \usepackage{setspace}
 \usepackage{tocloft}
+\usepackage[english]{babel}
+\usepackage{csquotes}
 
 % FONT SELECTION
 \usepackage{fontspec}
@@ -54,16 +56,16 @@
 %
 
 % Import in master.tex
-%\AdaptNoteOpt\footcite\multfootcite   %will add  separators if footcite is called multiple consecutive times 
+%\AdaptNoteOpt\footcite\multfootcite   %will add  separators if footcite is called multiple consecutive times
 %\AdaptNoteOpt\autocite\multautocite % will add  separators if autocite is called multiple consecutive times
-% Uncomment the next line for IEEE-style 
+% Uncomment the next line for IEEE-style
 % \usepackage[backend=biber, autocite=inline, style=ieee]{biblatex} 	% Use IEEE-Style (e.g. [1])
 
-% Uncomment the next line for alphabetic style 
+% Uncomment the next line for alphabetic style
 % \usepackage[backend=biber, autocite=inline, style=alphabetic]{biblatex} 	% Use alphabetic style (e.g. [TGK12])
 
-% Uncomment the next two lines vor Harvard-Style 
-%\usepackage[backend=biber, style=apa]{biblatex} 	
+% Uncomment the next two lines vor Harvard-Style
+%\usepackage[backend=biber, style=apa]{biblatex}
 %\DeclareLanguageMapping{german}{german-apa}
 
 
@@ -71,7 +73,7 @@
 %	andothers = {{et\,al\adddot}},
 %}
 
-%%% Uncomment the following lines to support hard URL breaks in bibliography 
+%%% Uncomment the following lines to support hard URL breaks in bibliography
 %\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
 %\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
 %\setcounter{biburlucpenalty}{9000}% Großbuchstaben
@@ -80,7 +82,7 @@
 \setlength{\bibparsep}{\parskip}		%add some space between biblatex entries in the bibliography
 \addbibresource{bibliography.bib}	%Add file bibliography.bib as biblatex resource
 
-%		FOOTNOTES 
+%		FOOTNOTES
 %
 % Count footnotes over chapters
 \usepackage{chngcntr}
@@ -109,7 +111,7 @@
 %%
 %% @stud
 %%
-%% Uncomment the following lines to support hard URL breaks in bibliography 
+%% Uncomment the following lines to support hard URL breaks in bibliography
 %\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
 %\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
 %\setcounter{biburlucpenalty}{9000}% Großbuchstaben
@@ -128,7 +130,7 @@
 
 %	LISTINGS
 % @stud: ggf. Namen/Text anpassen (englisch)
-\renewcommand{\lstlistingname}{Source} 
+\renewcommand{\lstlistingname}{Source}
 \renewcommand{\lstlistlistingname}{Source directory}
 \lstset{numbers=left,
 	numberstyle=\tiny,
@@ -153,6 +155,14 @@
 \ofoot[\rule{0pt}{\ht\strutbox+\dp\strutbox}\pagemark]{\rule{0pt}{\ht\strutbox+\dp\strutbox}\pagemark}
 \ohead{\headmark}
 
+% Definitionen und Commands
+\newcommand{\indextype}{numeric}
+\newcommand{\abs}{\par\vskip 0.2cm\goodbreak\noindent}
+\newcommand{\nl}{\par\noindent}
+\newcommand{\mcl}[1]{\mathcal{#1}}
+\newcommand{\nowrite}[1]{}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\imagedir}{img}
 \newcommand{\TitelDerArbeit}[1]{\def\DerTitelDerArbeit{#1}\hypersetup{pdftitle={#1}}}
 \newcommand{\AutorDerArbeit}[1]{\def\DerAutorDerArbeit{#1}\hypersetup{pdfauthor={#1}}}
 \newcommand{\Vorlesung}[1]{\def\DieVorlesung{#1}}
@@ -178,7 +188,7 @@
 \newcommand{\setTitlepage}{
 	\input{titlepage}
 	\pagenumbering{roman} % Römische Seitennummerierung
-	\normalfont	
+	\normalfont
 }
 
 \newcommand{\initializeText}{
@@ -189,7 +199,7 @@
 
 \newcommand{\initializeBibliography}{
 	\ihead{}
-	\printbibliography[title=\Literaturverzeichnis] 
+	\printbibliography[title=\Literaturverzeichnis]
 	\cleardoublepage
 }
 
@@ -198,5 +208,19 @@
   \ihead{}
   \cftaddtitleline{toc}{chapter}{Appendix}{}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LITERATURVERZEICHNIS
+% @stud: Literaturverzeichnis in Datei bibliography.bib anpassen.
+%
+% [Alternative zu Verwendung von \initializeBibliography: Citavi ... (dazu eigenes LaTex Coding verwenden)]
+%
+\addbibresource{bibliography.bib}
+%\DefineBibliographyStrings{ngerman}{andothers = {{et\,al\adddot}},}
+
+% Elementare Konfigurationen und Definitionen werden geladen
+% @stud: gegebenenfalls anpassen
+%
 
 
+% @stud
+%
