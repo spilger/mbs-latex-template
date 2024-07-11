@@ -1,34 +1,6 @@
 \documentclass[fontsize=12pt,BCOR=5mm,DIV=12,parskip=half,listof=totoc,
            paper=a4,toc=bibliography=totoc,pointlessnumbers,plainfootsepline]{scrreprt}
-%%%%%%%%%%%%%
-%% ZITIERSTIL
-%%%%%%%%%%%%%
-%
-% @stud: Zitierstil in package biblatex unten wählen
-%
-% NUMERIC Style - e. g. [12]
-% style=numeric
-%
-% IEEE Style - numeric kind of style
-% style=ieee
-%
-% ALPHABETIC Style - e. g. [AB12]
-% style=alphabetic
-%
-% HARVARD Style
-% style=apa
-%
-% CHICAGO Style
-% style=authoryear
-%
-% Position des Zitats:
-%
-% autocite=inline
-%
-% (!!) FOOTNOTE POSITION NOT RECOMMENDED IN MINT DOMAIN:
-% autocite=footnote
-%
-%
+
 \input{config}
 
 % Page Layout
@@ -42,15 +14,13 @@
 
 \makeindex
 
-
 % PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG EINGEBEN zwischen den Klammern: {...})
-%
-\TitelDerArbeit{The practical implementation of the EU taxonomy at SAP}
+\TitelDerArbeit{A Critical Comparison of SAPs Supplier Code of Conduct with Interview Insights}
 \AutorDerArbeit{Michael Spilger}
 \Kurs{MSIM25}
-\Vorlesung{Non-Financial Performance Evaluation \& Reporting}
-\Bearbeitungszeitraum{19.04.2024-17.05.2024}
-\WissBetreuer{Dr. Stefanie Ahrens}
+\Vorlesung{Sustainable Procurement}
+\Bearbeitungszeitraum{21.06.2024-21.07.2024}
+\WissBetreuer{Ruth Schlütken, Thomas Udesen}
 
 \begin{document}
 
@@ -58,68 +28,34 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % EHRENWÖRTLICHE ERKLÄRUNG
-%
-% @stud: ewerkl.tex bearbeiten
-%
 \input{ewerkl}
 \cleardoublepage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SPERRVERMERK
-%
-% @stud: nondisclosurenotice.tex bearbeiten
-%
 %\input{nondisclosurenotice}
 %\cleardoublepage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	KURZFASSUNG
-%
-% @stud: acknowledge.tex bearbeiten
-%
+% KURZFASSUNG
 %\input{acknowledge}
 %\cleardoublepage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % VERZEICHNISSE und ABSTRACT
-%
-% @stud: ggf. nicht benötigte Verzeichnisse auskommentieren/löschen
-%
 \tableofcontents
 \cleardoublepage
 
-% Abbildungsverzeichnis
-%\phantomsection
-%\addcontentsline{toc}{chapter}{\listfigurename}
-%\listoffigures
-%\cleardoublepage
-
-%	Tabellenverzeichnis
-\phantomsection
-%\addcontentsline{toc}{chapter}{\listtablename}
-%\listoftables
-%\cleardoublepage
-
-%	Listingsverzeichnis / Quelltextverzeichnis
-%\lstlistoflistings
-%\cleardoublepage
-
-% Algorithmenverzeichnis
-%\listofalgorithms
-%\cleardoublepage
-
 % Abkürzungsverzeichnis
-% @stud: acronyms.tex bearbeiten
 \input{acronyms}
 \cleardoublepage
 
 \onehalfspacing
 
-%	Kurzfassung / Abstract
-% @stud: abstract.tex bearbeiten
+% Kurzfassung / Abstract
 %\input{abstract}
 \cleardoublepage
 
@@ -127,53 +63,26 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % KAPITEL UND ANHÄNGE
-%
-% @stud:
-%   - nicht benötigte: auskommentieren/löschen
-%   - neue: bei Bedarf hinzufügen mittels input-Kommando an entsprechender Stelle einfügen
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % KAPITEL
-%
-% @stud: einzelne Kapitel bearbeiten und eigene Kapitel hier einfügen
-%
-% Einleitung
 \input{chapters/1-introduction}
-
-% mehrere Grundlagen- und Forschungs-Kapitel
 \input{chapters/chapter1}
-\input{chapters/chapter2}
-% Fazit und Ausblick
-%\input{chapters/conclusion}
+%\input{chapters/chapter2}
+\input{chapters/conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ANHÄNGE
-%
-% @stud: einzelne Anhänge bearbeiten und eigene Anhänge hier einfügen
-%        die nachfolgenden Zeilen deaktivieren, wenn keine Anhänge verwendet werden
-%
-%\initializeAppendix
-%\input{appendix1}
+\cleardoublepage
+\initializeAppendix
+\input{appendix1}
 %\input{appendix2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \singlespacing
 
-%\ihead{}
-%\printbibliography[title=\Literaturverzeichnis]
 \printbibliography
 \cleardoublepage
-
-%\initializeBibliography
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% INDEX
-% @stud: ggf. Index auskommentieren, wenn nicht benötigt
-%
-%\addcontentsline{toc}{chapter}{Index}
-%\printindex
 
 \end{document}
