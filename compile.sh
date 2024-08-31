@@ -25,7 +25,7 @@ lualatex --interaction=nonstopmode --shell-escape "$MAIN_FILE.tex"
 
 # Clean build files
 echo "Cleaning previous build files..."
-rm -f *.aux *.bbl *.blg *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.nav *.snm *.bcf *.run.xmlå
+rm -f *.aux *.bbl *.blg *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.nav *.snm *.bcf *.run.xml
 
 # Final message
 echo "Compilation process completed!"
