@@ -5,7 +5,7 @@ MAIN_FILE="master"
 
 # Clean previous build files
 echo "Cleaning previous build files..."
-rm -f *.aux *.bbl *.blg *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.nav *.snm *.bcf *.run.xml
+rm -f *.aux *.bbl *.blg *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.nav *.snm *.bcf *.run.xml *.idx
 
 # Run LuaLaTeX to generate auxiliary files
 echo "Running lualatex..."
@@ -25,7 +25,7 @@ lualatex --interaction=nonstopmode --shell-escape "$MAIN_FILE.tex"
 
 # Clean build files
 echo "Cleaning previous build files..."
-rm -f *.aux *.bbl *.blg *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.nav *.snm *.bcf *.run.xml
+rm -f *.aux *.bbl *.blg *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.nav *.snm *.bcf *.run.xml *.idx
 
 # Final message
 echo "Compilation process completed!"
