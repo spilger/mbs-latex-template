@@ -4,8 +4,85 @@
 \input{config}
 
 % Page Layout
-\usepackage[a4paper, margin=2.5cm]{geometry} % Adjust margins to 2.5 cm
+\oddsidemargin=0mm
+\evensidemargin=0mm
+\textwidth=159mm
+\topmargin=-18mm
+\headsep=10mm
+\textheight=251mm
+\footheight=15mm
 
 \makeindex
 
-% PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG
+% PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG EINGEBEN zwischen den Klammern: {...})
+\TitelDerArbeit{Defining Markets for plastic waste collection business model}
+\AutorDerArbeit{Michael Spilger}
+\Kurs{MSIM25}
+\Vorlesung{Sustainable Entrepreneurship}
+\Bearbeitungszeitraum{April 11th - Mai 11th 25}
+\WissBetreuer{Prof. Dr. Monika C. Schuhmacher}
+
+\begin{document}
+
+\setTitlepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EHRENWÖRTLICHE ERKLÄRUNG
+\input{ewerkl}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPERRVERMERK
+%\input{nondisclosurenotice}
+%\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KURZFASSUNG
+%\input{acknowledge}
+%\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% VERZEICHNISSE und ABSTRACT
+%\tableofcontents
+%\cleardoublepage
+
+% Abkürzungsverzeichnis
+%\input{acronyms}
+\cleardoublepage
+
+\onehalfspacing
+
+% Kurzfassung / Abstract
+%\input{abstract}
+\cleardoublepage
+
+\initializeText
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KAPITEL UND ANHÄNGE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% KAPITEL
+%\input{chapters/1-introduction}
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+%\input{chapters/conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ANHÄNGE
+\cleardoublepage
+\initializeAppendix
+\input{appendix1}
+%\input{appendix2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\singlespacing
+
+\printbibliography
+\cleardoublepage
+
+\end{document}
