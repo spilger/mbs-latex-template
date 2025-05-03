@@ -22,11 +22,15 @@
 \usepackage{algpseudocode}
 \usepackage{setspace}
 \usepackage{tocloft}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{pgf-pie}
 
 % FONT SELECTION
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
-\doublespacing
+\setmainfont{Times New Roman} % Ensure Times New Roman font
+\fontsize{12pt}{14pt}\selectfont % Set font size to 12 pt with appropriate line spacing
+\doublespacing % Ensure double spacing
 
 % Adjust default family to serif (Times New Roman)
 \renewcommand*{\familydefault}{\rmdefault}

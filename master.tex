@@ -4,85 +4,8 @@
 \input{config}
 
 % Page Layout
-\oddsidemargin=0mm
-\evensidemargin=0mm
-\textwidth=159mm
-\topmargin=-18mm
-\headsep=10mm
-\textheight=251mm
-\footheight=15mm
+\usepackage[a4paper, margin=2.5cm]{geometry} % Adjust margins to 2.5 cm
 
 \makeindex
 
-% PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG EINGEBEN zwischen den Klammern: {...})
-\TitelDerArbeit{Market and Morals - Buying Wedding Toast}
-\AutorDerArbeit{Michael Spilger}
-\Kurs{MSIM25}
-\Vorlesung{Impact Investing}
-\Bearbeitungszeitraum{November 5th - December 8th 24}
-\WissBetreuer{Dr. Andreas M. Rickert, Dr. Jiri Tresl}
-
-\begin{document}
-
-\setTitlepage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% EHRENWÖRTLICHE ERKLÄRUNG
-\input{ewerkl}
-\cleardoublepage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SPERRVERMERK
-%\input{nondisclosurenotice}
-%\cleardoublepage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% KURZFASSUNG
-%\input{acknowledge}
-%\cleardoublepage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% VERZEICHNISSE und ABSTRACT
-\tableofcontents
-\cleardoublepage
-
-% Abkürzungsverzeichnis
-%\input{acronyms}
-\cleardoublepage
-
-\onehalfspacing
-
-% Kurzfassung / Abstract
-%\input{abstract}
-\cleardoublepage
-
-\initializeText
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% KAPITEL UND ANHÄNGE
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% KAPITEL
-%\input{chapters/1-introduction}
-\input{chapters/chapter1}
-\input{chapters/chapter2}
-%\input{chapters/conclusion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ANHÄNGE
-\cleardoublepage
-\initializeAppendix
-\input{appendix1}
-%\input{appendix2}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\singlespacing
-
-\printbibliography
-\cleardoublepage
-
-\end{document}
+% PERSÖNLICHE ANGABEN (BITTE VOLLSTÄNDIG

@@ -1,11 +1,84 @@
-\chapter{Task}
+\paragraph{Problem Statement:} Plastic waste has reached crisis levels globally. Between 1950 and 2015, 8.3~billion tonnes of plastic were produced, generating 6.3~billion tonnes of waste, with only 9\% recycled\autocite{Geyer2017}. The rest pollutes land and oceans. Only 14\% of plastic packaging is recycled, causing \$80--120~billion in annual losses\autocite{Ezeudu2024}. Developing regions face greater challenges: LAC countries recycle less than 10\% of plastic waste\autocite{UNEP2023}, with 17,000~tonnes trashed daily in open dumps\autocite{Husaini2024}.
 
-Some websites offer ghostwritten wedding speeches. After answering a questionnaire and paying \$149, you will receive a custom toast that is professionally written within three business days. Other websites sell pre-written wedding speeches for \$19.95, which come with a money-back guarantee.
+\paragraph{Business Idea:} \textbf{Money for Waste} is an IoT-enabled, gamified recycling initiative addressing plastic pollution and wasted value. The startup uses smart bins and a mobile app to incentivize sorting and depositing plastic waste. Users earn points and rewards, turning recycling into a game-like experience. IoT tracks materials in real time, and sorted plastics are sold to recyclers, generating revenue and closing the loop. By rewarding consumers, \textit{Money for Waste} unlocks plastic waste's economic value while aligning profit with environmental benefit. \textit{Pilot Region:} The project will pilot in Bogotá, Colombia, a city of 10~million with no deposit-return system and a recycling rate under 10\%\autocite{UNEP2023}. Bogotá generates 280,000~tonnes of plastic waste annually, most of which is landfilled\autocite{UNEP2023}. This pilot leverages high waste generation to demonstrate the impact of incentives, with potential for scaling across Colombia and LAC markets.
 
-Suppose, on your wedding day, your best man/maid of honor delivers a heartwarming toast, a speech so moving it brings tears to your eyes. You later learn that it was bought online.
+\paragraph{Market Definition and Size:} The target market for \textit{Money for Waste} can be defined on three levels (see Table~\ref{tab:markets}). 
+\textbf{Total Addressable Market (TAM):} This represents the global potential of monetizing plastic waste. The worldwide plastic packaging waste stream (over 120~million tonnes annually) has a lost material value of \$80--120~billion\autocite{Ezeudu2024}, making the TAM ~€90~billion per year (assuming 1~USD~≈~0.9~EUR). This reflects the untapped economic value of recyclable plastics in a linear economy\autocite{Ezeudu2024}. 
+\textbf{Serviceable Available Market (SAM):} This is the portion of the TAM that \textit{Money for Waste} could realistically target in its initial expansion. In LAC emerging markets, where recycling infrastructure is underdeveloped, the SAM is ~€8~billion annually. LAC generates ~18~million tonnes of plastic waste per year (with <10\% recycled)\autocite{UNEP2023}; monetized at €500 per tonne, this yields ~€9~billion. 
+\textbf{Serviceable Obtainable Market (SOM):} This is the share of the SAM the startup can capture in the near term. Initially, \textit{Money for Waste} will target Bogotá. Colombia’s plastic waste (~1.3~million tonnes/year) corresponds to ~€0.5~billion in value. Bogotá, with ~0.28~million tonnes/year, offers an SOM of ~€120~million per year (at ~€430/tonne). Realistically, not all of this can be captured.
 
-\begin{enumerate}
-    \item Would you care?
-    \item Would the toast mean less than it did at first, before you knew it was written by a paid professional?
-    \item Finally, do you think that some market mechanisms change the value or meaning of the goods and social practices?
-\end{enumerate}
+\paragraph{Year 1 Sales Projection:} The pilot is projected to achieve significant results in its first year, capturing ~5\% of the serviceable market in Bogotá through early adopters and partnerships. Key figures are summarized in Table~\ref{fig:year1_sales_projection}.
+
+
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Statistic} & \textbf{Value} \\ \hline
+        Global plastic production (1950--2015) & 8.3~billion tonnes \\ \hline
+        Global plastic waste generated & 6.3~billion tonnes \\ \hline
+        Global recycling rate & 9\% \\ \hline
+        Plastic packaging recycling rate & 14\% \\ \hline
+        Annual economic loss & \$80--120~billion \\ \hline
+        LAC recycling rate & Less than 10\% \\ \hline
+        LAC daily plastic waste in open dumps & 17,000~tonnes \\ \hline
+    \end{tabular}
+    \caption{Key statistics on global and regional plastic waste challenges.}
+    \label{fig:plastic_waste_stats}
+\end{figure}
+
+\begin{table}[h!]\centering
+\caption{Market size estimates for \textit{Money for Waste} (in euros). TAM is global; SAM is the Latin American market; SOM is initially focused on Bogotá, Colombia.\label{tab:markets}}
+\begin{tabular}{p{4.7cm}p{6.3cm}r}
+\hline 
+\textbf{Market Segment} & \textbf{Scope and Assumptions} & \textbf{Annual Size}\\ 
+\hline 
+TAM (Global) & All plastic waste worldwide (esp.~packaging). $\sim$300~Mt/year generated; lost material value $\sim\$100$~B. & ~€90~B \\ 
+SAM (LAC Region) & Plastic waste in Latin America (~18~Mt/year not recycled). Assumes average €500/tonne value if recycled. & ~€8~B \\ 
+SOM (Bogotá pilot) & Plastic waste in Bogotá (~0.28~Mt/year). Assumes ~€430/tonne average value; initial obtainable share $\sim$28,000~t (10\%). & ~€12~M \\ 
+\hline
+\end{tabular}
+\end{table}
+% --- Bar Chart: Market Size by Segment ---
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}
+      \begin{axis}[
+        ybar,
+        bar width=20pt,
+        width=0.8\textwidth,
+        height=6cm,
+        enlarge x limits=0.3,
+        ylabel={Size (€ billion)},
+        symbolic x coords={TAM (Global), SAM (LAC), SOM (Bogotá)},
+        xtick=data,
+        nodes near coords,
+        nodes near coords align={vertical},
+        every node near coord/.append style={font=\small},
+        ]
+        \addplot+[fill=gray!30] coordinates {
+          (TAM (Global),90)
+          (SAM (LAC),8)
+          (SOM (Bogotá),0.12)
+        };
+      \end{axis}
+    \end{tikzpicture}
+    \caption{Market Size by Segment (in € billions).}
+  \end{figure}
+
+  \begin{figure}[h!]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Metric} & \textbf{Value} \\ \hline
+        Market capture rate & ~5\% \\ \hline
+        Plastics collected & 14,000~tonnes \\ \hline
+        Average revenue per tonne & €500 \\ \hline
+        Year 1 sales projection & €7~million \\ \hline
+    \end{tabular}
+    \caption{Year 1 sales projection for the Bogotá pilot.}
+    \label{fig:year1_sales_projection}
+\end{figure}
+  
